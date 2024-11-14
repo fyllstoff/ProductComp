@@ -1,0 +1,80 @@
+/* Fondo colorido con dos mitades y una línea divisoria */
+body {
+    background: 
+        linear-gradient(to bottom right, #333333, #000000) 50%, /* Degradado oscuro en la mitad izquierda */
+        linear-gradient(to bottom right, #87CEEB, #B0E0E6) 50%; /* Degradado celeste en la mitad derecha */
+    background-size: 50% 100%; /* Cada mitad ocupa el 50% del ancho */
+    background-position: left, right; /* Posiciona las mitades correctamente */
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; /* Fuentes modernas */
+    color: #333;
+}
+
+/* Contenedor del formulario centrado y estilizado */
+.container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+/* Título del formulario */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Estilo para las etiquetas y campos de entrada */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón de registro */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace de inicio de sesión */
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

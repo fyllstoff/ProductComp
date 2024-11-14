@@ -1,0 +1,72 @@
+/* Fondo con gradiente celeste */
+body {
+    background: linear-gradient(to bottom right, #87CEEB, #B0E0E6, #ADD8E6, #00BFFF, #1E90FF); /* Gradiente complejo en tonos celestes */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Contenedor principal para centrar título y botones */
+.menu-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* Tamaño máximo para que no se vea demasiado grande */
+}
+
+/* Estilo del encabezado */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de elementos del menú */
+ul.list-group {
+    padding: 0;
+}
+
+/* Estilo de los items de la lista */
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Estilo de los botones */
+.btn {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de "Listar Productos" */
+.btn-primary {
+    background: linear-gradient(to right, #00bcd4, #00a8cc); /* Degradado celeste */
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #00a8cc, #00bcd4);
+}
+
+/* Botón de "Registrar Producto" */
+.btn-success {
+    background: linear-gradient(to right, #66ccff, #0099cc); /* Degradado azul claro */
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(to right, #0099cc, #66ccff);
+}
