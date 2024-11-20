@@ -67,7 +67,7 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('index')  # Redirige a la vista principal después de iniciar sesión
+                return redirect('index')  
             else:
                 form.add_error(None, 'Nombre de usuario o contraseña incorrectos.')
     else:
