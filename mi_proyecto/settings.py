@@ -90,13 +90,13 @@ STATICFILES_DIRS = [BASE_DIR / 'productos' / 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Authentication settings
-LOGIN_URL = '/login/'  # URL para redirigir usuarios no autenticados
-LOGIN_REDIRECT_URL = '/index/'  # URL después de iniciar sesión
-LOGOUT_REDIRECT_URL = '/login/'  # URL después de cerrar sesión
+LOGIN_URL = '/login/'  
+LOGIN_REDIRECT_URL = '/index/'  
+LOGOUT_REDIRECT_URL = '/login/' 
 
-# Configuración de sesiones
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Usa la base de datos para las sesiones
-SESSION_COOKIE_AGE = 1209600  # 2 semanas de duración de sesión (ajustable)
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Expira al cerrar el navegador
-SESSION_COOKIE_SECURE = False  # Cambia a True si usas HTTPS
-CSRF_COOKIE_SECURE = False  # Cambia a True si usas HTTPS
+# Configuración de sesio
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  
+SESSION_COOKIE_AGE = 1209600  
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  
+SESSION_COOKIE_SECURE = False  
+CSRF_COOKIE_SECURE = False  
