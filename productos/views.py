@@ -5,14 +5,14 @@ from .forms import UserRegistrationForm, CustomAuthenticationForm
 from django.contrib.auth.decorators import login_required
 
 
-# Vista principal
+
 def index(request):
-    if request.user.is_authenticated:  # Verifica si el usuario está autenticado
+    if request.user.is_authenticated:  
         return render(request, 'index.html')
     else:
         return redirect('login')
 
-# Vista para listar productos
+
 @login_required
 def listar_productos(request):
     productos = Producto.objects.all()
@@ -49,7 +49,7 @@ def eliminar_producto(request, id):
     return redirect('listar_productos')
 
 
-# Vista para registrar un nuevo usuario
+
 def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
@@ -62,7 +62,7 @@ def register(request):
         form = UserRegistrationForm()
     return render(request, 'register.html', {'form': form})
 
-# Vista para iniciar sesión
+
 def login_view(request):
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, data=request.POST)
@@ -71,15 +71,15 @@ def login_view(request):
             password = form.cleaned_data['password']
             user = authenticate(request, username=username, password=password)
             if user is not None:
-                login(request, user)  # Inicia sesión del usuario
-                return redirect('index')  # Redirige al índice
+                login(request, user) 
+                return redirect('index') 
             else:
                 form.add_error(None, 'Nombre de usuario o contraseña incorrectos.')
     else:
         form = CustomAuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
-# Vista para cerrar sesión
+
 def logout_view(request):
-    logout(request)  # Cierra la sesión del usuario
-    return redirect('login')  # Redirige al login
+    logout(request)  
+    return redirect('login')  
